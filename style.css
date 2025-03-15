@@ -1,0 +1,385 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "inter", sans-serif;
+   height: 300vh;
+    background-color: #101010;
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+
+
+
+.hero{
+    
+    position: absolute;
+    top: 0;
+    margin-top: 0;
+    width: 100%;
+    height: 1080px;
+    background-image: url(topographic-04.jpg);
+    background-size: cover;
+    
+}
+
+.hero h1{
+    font-size: 12rem;
+    color: #fff;
+    text-align:start;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+}
+
+.hero h2{
+    font-size: 12rem;
+    color: #fff;
+    text-align:start;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.cat {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.comingsoonhead {
+    font-size: 3rem;
+    align-items: center;
+    margin-top: 20px;
+    color: #fff;
+    justify-content: center;
+    text-align: center;
+}
+
+.liam {
+    padding: 20px;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto ;
+    width: 800px;
+    height: auto;
+}
+
+.frog {
+    padding: 20px;
+    display: block;
+    margin-left:auto ;
+    margin-right: auto;
+    height: auto;
+    width: 800px;
+}
+
+.printtower{
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: auto;
+}
+
+.bettytown{
+    padding: 20px;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: auto;
+}
+
+.eye {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: auto;
+    padding: 20px;
+}
+
+.bus{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: auto;
+    padding: 20px; 
+}
+
+.munchen{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: auto;
+    padding: 20px; 
+}
+
+.marienplatz{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: auto;
+    padding: 20px; 
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(#000000, #10101004 );
+    
+    backdrop-filter:  blur(1px);
+    z-index: 999;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 3000px;
+}
+
+.navbar-logo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar-container .navbar-menu {
+    display: flex;
+    text-align: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.navbar-container .navbar-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 3px 20px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: all 0.7s ease;
+    white-space: nowrap;
+}
+
+.navbar-container .navbar-menu li a:hover,
+.navbar-container .navbar-menu li a.active {
+    color: #162530;
+    background: rgba(188, 212, 229, 0.8);
+    border: 2px solid #fff;
+}
+
+
+
+.navbar-toggle {
+    display: none;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+
+@media (max-width: 880px) {
+    .navbar {
+        backdrop-filter: none;
+    }
+
+    .navbar-container .navbar-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem !important;
+        position: fixed;
+        height: 100vh;
+        width: 250px  ;
+        top: 0;
+        right: -100%;
+        padding: 5rem 1.5rem;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
+        transition: 1s ease-in-out;
+        opacity: 0%;
+    }
+
+    .navbar-container .navbar-menu.active {
+        right: 0;
+        opacity: 100%;
+    }
+
+    .navbar-toggle {
+        display: block;
+        z-index: 999;
+    }
+
+    .navbar-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .navbar-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+.back-to-top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  #101010 ;
+    border-radius: 0.5rem;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 3px;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.back-to-top span{
+    color: #ffffff;
+    font-size: 2rem;
+    transition: 0.2s ease-in-out;
+    
+}
+
+.back-to-top:hover{
+    background-color: rgba(188, 212, 229, 0.8) ;
+    color: #162530;
+}
+
+.back-to-top:hover span{
+    transform: translateY(-4px);
+    color: #162530;
+}
+
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .navbar-logo {
+        font-size: 1.7rem;
+    }
+
+    .cat {
+        height: 325px;
+        width: 325px;
+    }
+
+    .comingsoonhead {
+        font-size: 1.5rem;
+    }
+
+    .navbar-container .navbar-menu li a {
+        font-size: 1.2rem;
+        padding: 3px 15px;
+    }
+
+    .back-to-top:hover{
+        background-color: #101010;
+        
+
+    }
+
+    .back-to-top:hover span{
+        transform: translateY(0px);
+        color: #fff;
+    }
+    
+    .liam{
+        width: 350px;
+        height: auto;
+    }
+  
+    .frog {
+        height: auto;
+        width: 350px;
+    }
+
+    .printtower {
+        width: 350px;
+        height: auto;
+    }
+
+    .bettytown {
+        width: 350px;
+        height: auto;
+    }
+
+    .eye {
+        width: 350px;
+        height: auto;
+    }
+
+    .bus{
+        width: 350px;
+        height: auto;
+    }
+
+    .munchen{
+        width: 350px;
+        height: auto;
+    }
+
+    .marienplatz{
+        width: 350px;
+        height: auto;
+    }
+
+    .hero{
+     height: 750px;
+    }
+
+    .hero h1{
+        font-size: 5rem;
+    }
+
+    .hero h2{
+        font-size: 5rem;
+    }
+}
