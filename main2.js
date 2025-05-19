@@ -225,5 +225,5 @@ document.head.appendChild(style);
 
 // Update target scale based on viewport
 function updateTargetScale() {
-  targetScale = window.innerWidth < 1000 ? 0.25 : 1;
+  targetScale = window.innerWidth < 1000 ? 0.5 : 1;
 }
